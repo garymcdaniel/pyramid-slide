@@ -2,36 +2,24 @@
 <html>
 <head>
     <style>
-        #pyramid {
-            line-height: 0;
-            font-size: 30px;
-        }
-
-        body {
-            font-family: "Courier New", monospace;
-            text-align: center;
-        }
+      
     </style>
 </head>
 <body >
-    <h1>Mario 3</h1>
-
-    <br>
-
-    <p>When you say</p>
-    <p><strong>Draw a pyramid</strong></p>
-    <p>I say:</p>
-
-    <br>
-
-    <label>How high?</label>
-    <input type="text" id="height"/>
-    <br><br>
-    <button id="pyr">Draw a pyramid</button>
-
-    <br><br>
-
-    <div id="pyramid">
+    <h1>Pyramid Slide</h1>
+    <form>
+        <span>Brick Symbol:</span>
+        <select>
+            <option value="#">#</option>
+            <option value="X">X</option>
+            <option value="@">@</option>
+            <option value="$">$</option>
+        </select>
+        <span>How high?</span><input type= "range" name="points" min="0" max="10">
+        <!--need to figure out the function below later-->
+        <!--input type="text" oninput="myFunction()"-->
+    </form>
+    <div>
         
     </div>
 

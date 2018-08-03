@@ -15,7 +15,9 @@
             <option value="@">@</option>
             <option value="$">$</option>
         </select>
-        <span>How high?</span><input type= "range" name="points" min="0" max="10">
+        <span>How High?
+        <input type= "range" oninput="howHigh(this.value)">
+        <p id= "slider"></p></span>        
         <!--need to figure out the function below later-->
         <!--input type="text" oninput="myFunction()"-->
     </form>

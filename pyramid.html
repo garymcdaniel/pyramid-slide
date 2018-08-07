@@ -2,28 +2,36 @@
 <html>
 <head>
     <style>
+        /*h1{
+            text-align: center;
+            background-color: #9b4291;
+            color: rgb(175, 168, 168);
+        }*/
       
     </style>
 </head>
 <body >
     <h1>Pyramid Slide</h1>
-    <form>
-        <span>Brick Symbol:</span>
-        <select>
-            <option value="#">#</option>
-            <option value="X">X</option>
-            <option value="@">@</option>
-            <option value="$">$</option>
-        </select>
-        <span>How High?
-        <input type= "range" oninput="howHigh(this.value)">
-        <p id= "slider"></p></span>        
-        <!--need to figure out the function below later-->
-        <!--input type="text" oninput="myFunction()"-->
+       
+
+    <form id="draw-form" accept-charset="UTF-8">
+        <label>
+            <span>Brick Symbol:
+                <select id="mySelect" onchange="drawPyramid(this.value)">
+                    <option value="#">#</option>
+                    <option value="X">X</option>
+                    <option value="@">@</option>
+                    <option value="$">$</option>
+                </select>
+            How high?
+            <input type= "range" oninput="drawPyramid(this.value)",  min="0" max="100" data-show-value="true">
+            <p id = "slider"></p></span>
+            <label>
+                
     </form>
-    <div>
-        
-    </div>
+    
+            <div id="pyramid"></div>
+    
 
     <script src="pyramid.js"></script>
 </body>

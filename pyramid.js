@@ -10,7 +10,17 @@ function getHeight(val) {
     document.getElementById("slider").innerHTML = val;
 }
 
-function drawPyramid(height) {
+function determineBlockAndHeightThenDrawPyramid() {
+
+    var height = document.getElementById('heightval').value; // something
+    var brickSymbol = document.getElementById('mySelect').value; // something
+
+    // figure out what these should be.
+
+    drawPyramid(brickSymbol, height);
+}
+
+function drawPyramid(brickSymbol, height) {
     
     // first, clear the old content
     document.getElementById("pyramid").innerHTML = "";
@@ -29,7 +39,7 @@ function drawPyramid(height) {
             rowStr += spaceChar;
         }
         for (var i = 0; i < numBricks; i++) {
-            rowStr += "@";
+            rowStr += brickSymbol;
         }
         
        
@@ -38,4 +48,7 @@ function drawPyramid(height) {
         rowElem.innerHTML = rowStr;
         document.getElementById("pyramid").appendChild(rowElem);
     }
+
 }
+determineBlockAndHeightThenDrawPyramid();
+
